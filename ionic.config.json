@@ -1,0 +1,7 @@
+{
+  "name": "meetable",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
