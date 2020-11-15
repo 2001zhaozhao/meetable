@@ -5,27 +5,27 @@ import Tabs from '../views/Tabs.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/tabs/tab1'
-  },
-  {
-    path: '/tabs/',
     component: Tabs,
     children: [
       {
         path: '',
-        redirect: 'tab1'
+        redirect: 'my-vibe'
       },
       {
-        path: 'tab1',
-        component: () => import('@/views/Tab1.vue')
+        path: 'challenge',
+        component: () => import('@/views/TabChallenge.vue')
       },
       {
-        path: 'tab2',
-        component: () => import('@/views/Tab2.vue')
+        path: 'make-friends',
+        component: () => import('@/views/TabMakeFriends.vue')
       },
       {
-        path: 'tab3',
-        component: () => import('@/views/Tab3.vue')
+        path: 'messages',
+        component: () => import('@/views/TabMessages.vue')
+      },
+      {
+        path: 'my-vibe',
+        component: () => import('@/views/TabMyVibe.vue')
       }
     ]
   }

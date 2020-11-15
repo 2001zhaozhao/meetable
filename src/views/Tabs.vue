@@ -2,19 +2,24 @@
   <ion-page>
     <ion-tabs>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="tab1" href="/tabs/tab1">
-          <ion-icon :icon="triangle" />
-          <ion-label>Tab 1</ion-label>
-        </ion-tab-button>
-          
-        <ion-tab-button tab="tab2" href="/tabs/tab2">
-          <ion-icon :icon="ellipse" />
-          <ion-label>Tab 2</ion-label>
+        <ion-tab-button tab="tab-messages" href="/messages">
+          <ion-icon :icon="chatbubbles" />
+          <ion-label>Messages</ion-label>
         </ion-tab-button>
         
-        <ion-tab-button tab="tab3" href="/tabs/tab3">
-          <ion-icon :icon="square" />
-          <ion-label>Tab 3</ion-label>
+        <ion-tab-button tab="tab-make-friends" href="/make-friends">
+          <ion-icon :icon="people" />
+          <ion-label>Make Friends</ion-label>
+        </ion-tab-button>
+          
+        <ion-tab-button tab="tab-challenge" href="/challenge">
+          <ion-icon :icon="trophy" />
+          <ion-label>Challenge</ion-label>
+        </ion-tab-button>
+        
+        <ion-tab-button tab="tab-my-vibe" href="/my-vibe">
+          <ion-icon :icon="person" />
+          <ion-label>My Vibe</ion-label>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>
@@ -23,16 +28,17 @@
 
 <script lang="ts">
 import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage } from '@ionic/vue';
-import { ellipse, square, triangle } from 'ionicons/icons';
+import { chatbubbles, people, trophy, person } from 'ionicons/icons';
 
 export default {
   name: 'Tabs',
   components: { IonLabel, IonTabs, IonTabBar, IonTabButton, IonIcon, IonPage },
   setup() {
     return {
-      ellipse, 
-      square, 
-      triangle,
+      chatbubbles,
+      people, 
+      trophy, 
+      person,
     }
   }
 }
